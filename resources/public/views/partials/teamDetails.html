@@ -1,0 +1,72 @@
+<div>
+    <h2 class="pull-left">{{ team.Team_name }}</h2>
+    <a href="#/myTeam/{{ teamId }}" class="btn btn-primary pull-right">Edit</a>
+    <div class="row-fluid">
+        <div class="span12">
+            <h4>Roster</h4>
+            <table class="table table-condensed" ng-show="players">
+                <thead>
+                    <tr>
+                        <th><a href="" ng-click="rosterPred = 'First_name'; rosterRev=!rosterRev">Name</a></th>
+                        <th><a href="" ng-click="rosterPred = 'Type'; rosterRev=!rosterRev">Position</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="player in players | orderBy:rosterPred:rosterRev">
+                        <td>{{ player.First_name }}&nbsp;{{ player.Last_name }}</td>
+                        <td>{{ player.Type }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="muted" ng-hide="players">There are no players assigned to this team.</p>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <h4>Schedule</h4>
+            <table class="table table-condensed" ng-show="futureGames">
+                <thead>
+                    <tr>
+                        <th><a href="" ng-click="futurePred = 'opponent.Team_name'; futureRev=!futureRev">Opponent</a></th>
+                        <th><a href="" ng-click="futurePred = 'DateTime'; futureRev=!futureRev">Date & Time</a></th>
+                        <th><a href="" ng-click="futurePred = 'loc.Field_name'; futureRev=!futureRev">Location</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="game in futureGames | orderBy:futurePred:futureRev">
+                        <td>{{ game.opponent.Team_name }}</td>
+                        <td>{{ game.DateTime | prettyDateTime }}</td>
+                        <td>{{ game.loc.Field_name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="muted" ng-hide="futureGames">This team has no upcoming games scheduled.</p>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <h4>Past Games</h4>
+            <table class="table table-condensed" ng-show="pastGames">
+                <thead>
+                    <tr>
+                        <th><a href="" ng-click="pastPredicate = 'result'; pastReverse=!pastReverse">Result</a></th>
+                        <th><a href="" ng-click="pastPredicate = 'opponent.Team_name'; pastReverse=!pastReverse">Opponent</a></th>
+                        <th><a href="" ng-click="pastPredicate = 'DateTime'; pastReverse=!pastReverse">Date & Time</a></th>
+                        <th><a href="" ng-click="pastPredicate = 'loc.Field_name'; pastReverse=!pastReverse">Location</a></th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="game in pastGames | orderBy:pastPredicate:pastReverse">
+                        <td>{{ game.result }}</td>
+                        <td>{{ game.opponent.Team_name }}</td>
+                        <td>{{ game.DateTime | prettyDateTime }}</td>
+                        <td>{{ game.loc.Field_name }}</td>
+                        <td>{{ game.Home_score }} - {{ game.Away_score }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="muted" ng-hide="pastGames">This team has not played any games yet.</p>
+        </div>
+    </div>
+</div>

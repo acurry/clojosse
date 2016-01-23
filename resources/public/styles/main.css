@@ -1,0 +1,62 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+body {
+	font-size: 12px;
+    background-color: #333;
+    color: #EEE;
+}
+
+.hero-unit {
+    background-color: #333;
+    padding: 20px 60px;
+}
+
+a, a.editable-click {
+    color: #44bbff;
+}
+
+a:hover, a.editable-click:hover {
+    color: #66DDff;
+}
+
+.table td {
+    border-top-color: #666;
+}
+
+tbody tr:hover {
+    background-color: #6A6A6A;
+}
+
+.nav {
+    background-color: #333;
+}
+
+.nav > li > a:hover {
+    background-color: #777;
+}
+
+.nav-list .divider {
+    border: none;
+    background-color: #888;
+}
+
+.well {
+    background-color: #333;
+    border: none;
+}
+
+.container.main {
+    width: 1200px;
+}
+
+.player-row .player-edit-btn {
+    visibility: hidden;
+}
+
+.player-row:hover .player-edit-btn {
+    visibility: visible;
+}
+
+.datepicker-addon {
+    /*margin-top: 1px;*/
+}

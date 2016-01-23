@@ -1,0 +1,56 @@
+<div class="row-fluid">
+    <div class="span12" ng-show="!isAuthorized">
+        <h3>You are unauthorized to edit this player's information.</h3>
+    </div>
+    <div class="span12" ng-show="isAuthorized">
+        <form class="form-horizontal player-form" name="playerForm">
+            <div class="control-group">
+                <label class="control-label" for="firstName">First Name *</label>
+                <div class="controls">
+                    <input type="text" name="First_name" ng-model="player.First_name" required>
+                    <em class="muted" ng-show="playerForm.First_name.$error.required">Required</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="lastName">Last Name *</label>
+                <div class="controls">
+                    <input type="text" name="Last_name" ng-model="player.Last_name" required>
+                    <em class="muted" ng-show="playerForm.Last_name.$error.required">Required</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="emailAddress">Email Address *</label>
+                <div class="controls">
+                    <input type="email" name="Email" ng-model="player.Email" required>
+                    <em class="muted" ng-show="playerForm.Email.$error.required">Required</em>
+                    <em class="muted" ng-show="playerForm.Email.$error.email">Invalid email</em>
+                    <em class="muted" ng-show="playerForm.Email.$error.conflict">A user with that email already exists.</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="dob">DOB *</label>
+                <div class="controls">
+                    <div class="input-append">
+                        <input name="DOB" type="text" datepicker-popup="{{format}}" ng-model="player.DOB" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <button class="btn" ng-click="showDatepicker()"><i class="icon-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phoneNumber">Phone Number</label>
+                <div class="controls">
+                    <input type="text" ng-model="player.Phone">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="position">Position</label>
+                <div class="controls">
+                    <select ng-model="player.Position" ng-options="position.Position_ID as position.label for position in positions">
+                    </select>
+                </div>
+            </div>
+            <button type="submit" ng-disabled="playerForm.$invalid" class="btn btn-primary" ng-click="savePlayer()">Save</button>
+            <button class="btn" ng-click="cancel()">Cancel</button>
+        </form>
+    </div>
+</div>

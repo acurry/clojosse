@@ -1,0 +1,25 @@
+<div class="row-fluid" ng-show="isAuthorized">
+	<div class="span11">
+		<h2>My Profile</h2>
+		<dl class="dl-horizontal">
+		    <dt>ID</dt>
+		    <dd>{{ coach.Contact_ID }}</dd>
+		    <dt>First Name</dt>
+		    <dd>{{ coach.First_name }}</dd>
+		    <dt>Last Name</dt>
+		    <dd>{{ coach.Last_name }}</dd>
+		    <dt>Email Address</dt>
+		    <dd>{{ coach.Email }}</dd>
+		    <dt>Phone Number</dt>
+		    <dd>{{ coach.Phone }}</dd>
+		</dl>
+	</div>
+	<div class="span1">
+		<a href="#/myProfile/edit/{{ coach.Contact_ID }}" class="btn btn-primary">Edit</a>
+	</div>
+</div>
+<div class="row-fluid" ng-hide="isAuthorized">
+	<div class="span12">
+		<h3>You are not an authorized user of the system.</h3>
+	</div>
+</div>

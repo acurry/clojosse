@@ -1,0 +1,51 @@
+[{
+    "name": "M&T Bank Stadium",
+    "address": {
+        "street": "Russell St.",
+        "city": "Baltimore",
+        "state": "MD",
+        "zipCode": "21230"
+    },
+    "poc": "andy@anglelax.com",
+    "homeTeamId": "ravens"
+}, {
+    "name": "Fedex Field",
+    "address": {
+        "street": "Fedex Way",
+        "city": "Landover",
+        "state": "MD",
+        "zipCode": "20785"
+    },
+    "poc": "matt@anglelax.com",
+    "homeTeamId": "redskins"
+}, {
+    "name": "Heinz Field",
+    "address": {
+        "street": "Art Rooney Ave.",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "zipCode": "15212"
+    },
+    "poc": "ben@anglelax.com",
+    "homeTeamId": "steelers"
+}, {
+    "name": "MetLife Stadium",
+    "address": {
+        "street": "MetLife Stadium Dr.",
+        "city": "East Rutherford",
+        "state": "NJ",
+        "zipCode": "07073"
+    },
+    "poc": "eli@anglelax.com",
+    "homeTeamId": "giants"
+}, {
+    "name": "Lincoln Financial Field",
+    "address": {
+        "street": "Lincoln Financial Field Way",
+        "city": "Philadelphia",
+        "state": "PA",
+        "zipCode": "19147"
+    },
+    "poc": "michael@anglelax.com",
+    "homeTeamId": "eagles"
+}]

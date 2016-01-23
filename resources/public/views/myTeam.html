@@ -1,0 +1,41 @@
+<div class="row-fluid">
+    <div class="span12" ng-show="!isAuthorized">
+        <h3>You are unauthorized.</h3>
+    </div>
+    <div class="span12" ng-show="isAuthorized">
+        <a href="#" editable-text="team.Team_name" class="team-name-edit" onbeforesave="updateTeamName($data)">
+            <h2>{{ team.Team_name }}</h2>
+        </a>
+        <div class="clearfix"></div>
+        <h4>Roster</h4>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="predicate = 'Player_ID'; reverse=!reverse">ID</a></th>
+                    <th><a href="" ng-click="predicate = 'First_name'; reverse=!reverse">Name</a></th>
+                    <th><a href="" ng-click="predicate = 'Type'; reverse=!reverse">Position</a></th>
+                    <th><a href="" ng-click="predicate = 'DOB'; reverse=!reverse">DOB</a></th>
+                    <th><a href="" ng-click="predicate = 'Email'; reverse=!reverse">Email Address</a></th>
+                    <th><a href="" ng-click="predicate = 'Phone'; reverse=!reverse">Phone Number</a></th>
+                    <th>
+                        <!-- edit -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="player-row" ng-repeat="player in players | orderBy:predicate:reverse">
+                    <td>{{ player.Player_ID }}</td>
+                    <td>{{ player.First_name }}&nbsp;{{ player.Last_name }}</td>
+                    <td>{{ player.Type }}</td>
+                    <td>{{ player.DOB | standardDate }}</td>
+                    <td>{{ player.Email }}</td>
+                    <td>{{ player.Phone }}</td>
+                    <td>
+                        <a href="#/myTeam/{{ teamId }}/edit/{{ player.Player_ID }}" class="player-edit-btn"><i class="icon-pencil icon-white"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#/myTeam/{{ teamId }}/add" class="btn btn-primary">Add</a>
+    </div>
+</div>

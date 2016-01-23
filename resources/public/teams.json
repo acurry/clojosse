@@ -1,0 +1,21 @@
+[{
+    "city": "Baltimore",
+    "name": "Ravens",
+    "id": "ravens"
+}, {
+    "city": "Washington",
+    "name": "Redskins",
+    "id": "redskins"
+}, {
+    "city": "Philadelphia",
+    "name": "Eagles",
+    "id": "eagles"
+}, {
+    "city": "Pittsburgh",
+    "name": "Steelers",
+    "id": "steelers"
+}, {
+    "city": "New York",
+    "name": "Giants",
+    "id": "giants"
+}]

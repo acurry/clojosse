@@ -1,0 +1,48 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h2>Upcoming games</h2>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="futurePredicate = 'awayTeam.Team_name'; futureReverse=!futureReverse">Away</a></th>
+                    <th><a href="" ng-click="futurePredicate = 'homeTeam.Team_name'; futureReverse=!futureReverse">Home</a></th>
+                    <th><a href="" ng-click="futurePredicate = 'DateTime'; futureReverse=!futureReverse">Date & Time</a></th>
+                    <th><a href="" ng-click="futurePredicate = 'loc.Field_name'; futureReverse=!futureReverse">Location</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="game in futureGames | orderBy:futurePredicate:futureReverse">
+                    <td>{{ game.awayTeam.Team_name }}</td>
+                    <td>{{ game.homeTeam.Team_name }}</td>
+                    <td>{{ game.DateTime | prettyDateTime }}</td>
+                    <td>{{ game.loc.Field_name }}, {{ game.loc.City }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h2>Recent games</h2>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="pastPredicate = 'awayTeam.Team_name'; pastReverse=!pastReverse">Away</a></th>
+                    <th><a href="" ng-click="pastPredicate = 'homeTeam.Team_name'; pastReverse=!pastReverse">Home</a></th>
+                    <th>Score</th>
+                    <th><a href="" ng-click="pastPredicate = 'DateTime'; pastReverse=!pastReverse">Date & Time</a></th>
+                    <th><a href="" ng-click="pastPredicate = 'loc.Field_name'; pastReverse=!pastReverse">Location</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="game in pastGames | orderBy:pastPredicate:pastReverse">
+                    <td>{{ game.awayTeam.Team_name }}</td>
+                    <td>{{ game.homeTeam.Team_name }}</td>
+                    <td>{{ game.Away_score }} - {{ game.Home_score }}</td>
+                    <td>{{ game.DateTime | prettyDateTime }}</td>
+                    <td>{{ game.loc.Field_name }}, {{ game.loc.City }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

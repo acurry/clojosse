@@ -1,0 +1,28 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h2>All Locations</h2>
+        <table class="table table-condensed">
+
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="predicate = 'Field_name'; reverse=!reverse">Name</a></th>
+                    <th><a href="" ng-click="predicate = 'Street'; reverse=!reverse">Street</a></th>
+                    <th><a href="" ng-click="predicate = 'City'; reverse=!reverse">City</a></th>
+                    <th><a href="" ng-click="predicate = 'Zip_code'; reverse=!reverse">ZIP</a></th>
+                    <th><a href="" ng-click="predicate = 'Last_name'; reverse=!reverse">POC</a></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="location in locations | orderBy:predicate:reverse">
+                    <td>{{ location.Field_name }}</td>
+                    <td>{{ location.Street }}</td>
+                    <td>{{ location.City }}</td>
+                    <td>{{ location.Zip_code }}</td>
+                    <td>{{ location.Last_name }}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

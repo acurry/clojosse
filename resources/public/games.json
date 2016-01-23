@@ -1,0 +1,51 @@
+[{
+    "homeTeamId": "ravens",
+    "awayTeamId": "eagles",
+    "dateTime": "2014-10-12T22:38:33.892Z"
+}, {
+    "homeTeamId": "eagles",
+    "awayTeamId": "redskins",
+    "dateTime": "2014-10-11T22:38:33.892Z"
+}, {
+    "homeTeamId": "redskins",
+    "awayTeamId": "steelers",
+    "dateTime": "2014-10-10T22:38:33.892Z"
+}, {
+    "homeTeamId": "steelers",
+    "awayTeamId": "giants",
+    "dateTime": "2014-10-09T22:38:33.892Z"
+}, {
+    "homeTeamId": "giants",
+    "awayTeamId": "ravens",
+    "dateTime": "2014-10-08T22:38:33.892Z"
+}, {
+    "homeTeamId": "ravens",
+    "awayTeamId": "steelers",
+    "dateTime": "2013-10-12T22:38:33.892Z",
+    "homeTeamScore": 21,
+    "awayTeamScore": 0
+}, {
+    "homeTeamId": "steelers",
+    "awayTeamId": "eagles",
+    "dateTime": "2013-10-11T22:38:33.892Z",
+    "homeTeamScore": 14,
+    "awayTeamScore": 21
+}, {
+    "homeTeamId": "eagles",
+    "awayTeamId": "giants",
+    "dateTime": "2013-10-10T22:38:33.892Z",
+    "homeTeamScore": 7,
+    "awayTeamScore": 0
+}, {
+    "homeTeamId": "giants",
+    "awayTeamId": "redskins",
+    "dateTime": "2013-10-09T22:38:33.892Z",
+    "homeTeamScore": 3,
+    "awayTeamScore": 34
+}, {
+    "homeTeamId": "redskins",
+    "awayTeamId": "ravens",
+    "dateTime": "2013-10-08T22:38:33.892Z",
+    "homeTeamScore": 52,
+    "awayTeamScore": 47
+}]

@@ -1,0 +1,91 @@
+[{
+    "firstName": "Andrew",
+    "lastName": "Curry",
+    "emailAddress": "andrew.d.curry@gmail.com",
+    "phoneNumber": "4101112222",
+    "dob": "1983-10-12T22:38:33.892Z",
+    "position": "Attack",
+    "teamId": "ravens",
+    "number": "31"
+}, {
+    "firstName": "Mike",
+    "lastName": "Braun",
+    "emailAddress": "mike.braun@braun.com",
+    "phoneNumber": "4104445555",
+    "dob": "1995-10-12T22:38:33.892Z",
+    "position": "Midfield",
+    "teamId": "ravens",
+    "number": "22"
+}, {
+    "firstName": "Derek",
+    "lastName": "Passen",
+    "emailAddress": "dpass@dpass.com",
+    "phoneNumber": "4102223333",
+    "dob": "1993-10-12T22:38:33.892Z",
+    "position": "Defense",
+    "teamId": "giants",
+    "number": "46"
+}, {
+    "firstName": "Eli",
+    "lastName": "Manning",
+    "emailAddress": "eli@manning.com",
+    "phoneNumber": "4108889999",
+    "dob": "1995-11-12T22:38:33.892Z",
+    "position": "Attack",
+    "teamId": "giants",
+    "number": "8"
+}, {
+    "firstName": "Matt",
+    "lastName": "Kirkley",
+    "emailAddress": "matt.kirkley@kirkley.com",
+    "phoneNumber": "4103334444",
+    "dob": "1990-10-12T22:38:33.892Z",
+    "position": "Goalie",
+    "teamId": "redskins",
+    "number": "71"
+}, {
+    "firstName": "Robert",
+    "lastName": "Griffin III",
+    "emailAddress": "robert@griffin.org",
+    "phoneNumber": "4107778888",
+    "dob": "1983-05-12T22:38:33.892Z",
+    "position": "Defense",
+    "teamId": "redskins",
+    "number": "19"
+}, {
+    "firstName": "Hiro",
+    "lastName": "Nakamura",
+    "emailAddress": "hiro@heroes.com",
+    "phoneNumber": "4105556666",
+    "dob": "1995-08-12T22:38:33.892Z",
+    "position": "Midfield",
+    "teamId": "steelers",
+    "number": "67"
+}, {
+    "firstName": "Ben",
+    "lastName": "Rotorooter",
+    "emailAddress": "ben@steelers.com",
+    "phoneNumber": "4101233210",
+    "dob": "1984-06-12T22:38:33.892Z",
+    "position": "Attack",
+    "teamId": "steelers",
+    "number": "13"
+}, {
+    "firstName": "Michael",
+    "lastName": "Vick",
+    "emailAddress": "michael@vick.com",
+    "phoneNumber": "4106667777",
+    "dob": "1987-04-12T22:38:33.892Z",
+    "position": "Attack",
+    "teamId": "eagles",
+    "number": "82"
+}, {
+    "firstName": "DeSean",
+    "lastName": "Jackson",
+    "emailAddress": "desean@jackson.com",
+    "phoneNumber": "4101919191",
+    "dob": "1999-12-12T22:38:33.892Z",
+    "position": "Defense",
+    "teamId": "eagles",
+    "number": "75"
+}]

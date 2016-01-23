@@ -1,0 +1,43 @@
+<div class="row-fluid" ng-show="isAuthorized">
+    <div class="span12">
+        <h2>Edit My Profile</h2>
+        <form class="form-horizontal coach-form" name="coachForm">
+            <div class="control-group">
+                <label class="control-label" for="firstName">First Name *</label>
+                <div class="controls">
+                    <input type="text" name="First_name" ng-model="coach.First_name" required>
+                    <em class="muted" ng-show="coachForm.First_name.$error.required">Required</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="lastName">Last Name *</label>
+                <div class="controls">
+                    <input type="text" name="Last_name" ng-model="coach.Last_name" required>
+                    <em class="muted" ng-show="coachForm.First_name.$error.required">Required</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="emailAddress">Email Address *</label>
+                <div class="controls">
+                    <input type="email" name="Email" ng-model="coach.Email">
+                    <em class="muted" ng-show="coachForm.Email.$error.required">Required</em>
+                    <em class="muted" ng-show="coachForm.Email.$error.email">Invalid email</em>
+                    <em class="muted" ng-show="coachForm.Email.$error.conflict">A user with that email already exists.</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phoneNumber">Phone Number</label>
+                <div class="controls">
+                    <input type="text" ng-model="coach.Phone">
+                </div>
+            </div>
+            <button type="submit" ng-disabled="coachForm.$invalid" class="btn btn-primary" ng-click="saveMyProfile()">Save</button>
+            <button class="btn" ng-click="cancel()">Cancel</button>
+        </form>
+    </div>
+</div>
+<div class="row-fluid" ng-hide="isAuthorized">
+    <div class="span12">
+        <h3>You are not an authorized user of the system.</h3>
+    </div>
+</div>

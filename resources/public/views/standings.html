@@ -1,0 +1,23 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h2>League Standings</h2>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="predicate = 'Team_name'; reverse=!reverse">Team</a></th>
+                    <th><a href="" ng-click="predicate = 'stats.wins'; reverse=!reverse">Wins</a></th>
+                    <th><a href="" ng-click="predicate = 'stats.losses'; reverse=!reverse">Losses</a></th>
+                    <th><a href="" ng-click="predicate = 'stats.percentage'; reverse=!reverse">Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="team in teamStats | orderBy:predicate:reverse">
+                    <td>{{ team.Team_name }}</td>
+                    <td>{{ team.stats.wins }}</td>
+                    <td>{{ team.stats.losses }}</td>
+                    <td>{{ team.stats.percentage.toFixed(4) * 100 }} %</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
